@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: orgonite;
+    src: url(./assets/stone\ orgonite.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand";
+    color: #333;
+}
+
+html,
+body {
+    height: 100%
+}
+
+.app {
+    min-height: 100vh;
+}
+
+/* Header.js */
+.Header {
+    min-height: 10vh;
+    background: rgb(249, 248, 248);
+    box-shadow: 3px 3px 5px grey;
+}
+
+.Header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    color: #3cd2fb;
+    font-family: "orgonite", sans-serif;
+}
+
+/* Nav.js */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav>.link {
+    padding: .3rem;
+}
+
+nav>.link>a {
+    margin: 0rem 2rem 0rem;
+    font-size: 4rem;
+    font-weight: 600;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav>.link>a:hover {
+    color: rgb(55, 221, 251);
+    border-bottom: 4px solid #3cd2fb;
+}
+
+/* ------------NP---------------------begin */
+/* NP.js */
+.nextBack {
+    margin: 1rem 3rem 0;
+    display: flex;
+}
+
+.nextBack>.back {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    float: right;
+}
+
+.nextBack>.next {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+    float: right;
+}
+
+.nextBack>.back>button,
+.nextBack>.next>button {
+    font-size: 3rem;
+}
+
+/* ProjectInput.js */
+form {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 3rem 1rem;
+    background: rgba(249, 246, 246, 0.889);
+    border-radius: .2rem;
+}
+
+form p {
+    margin: 0rem .3rem 1rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: .2rem 0rem .2rem;
+    font-size: 4rem;
+    font-weight: 600;
+    box-shadow: 3px 3px 5px grey;
+    border: none;
+    border-radius: .2rem;
+}
+
+/* textarea {
+    height: 20vh;
+} */
+
+label {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+label:after {
+    content: ":"
+}
+
+.submitButton {
+    display: flex;
+    justify-content: end;
+}
+
+.submitButton>button {
+    margin: 1rem;
+}
+
+button {
+    color: white;
+    background-color: #3cd2fb;
+    font-size: 4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: .2rem;
+    box-shadow: 3px 3px 5px grey;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(0, 191, 255)
+}
+
+button:active {
+    opacity: 0.7;
+    outline: 2px solid rgb(0, 128, 255);
+}
+
+/* NPproject.js */
+.NPproject-container>.title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.NPproject-container>.title-container>h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.NPproject-container>.title-container>h1 {
+    width: 50%;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px grey;
+    font-size: 3rem;
+    color: #3cd2fb;
+    font-family: orgonite;
+    font-weight: 600;
+    align-items: center;
+}
+
+.NPproject-container>.project-basic-infos-container {
+    margin: 1rem 3rem 1rem;
+    background: rgba(249, 246, 246, 0.889);
+    border-radius: .2rem;
+}
+
+.NPproject-container>.project-basic-infos-container>p {
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* avoid text flowing out of div: */
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+.NPproject-container>.project-basic-infos-container>p>span {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+/* NPtasks.js */
+.NPtasks-container>.title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.NPtasks-container>.title-container>h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.NPtasks-container>.title-container>h1 {
+    width: 50%;
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px grey;
+    font-size: 3rem;
+    color: #3cd2fb;
+    font-family: orgonite;
+    font-weight: 600;
+    align-items: center;
+}
+
+/* NPtasks.js */
+.NPtasks-container>.tasks-infos-container>.main-task-infos {
+    margin: 1rem 3rem 1rem;
+    background: rgba(249, 246, 246, 0.889);
+    border-radius: .2rem;
+    font-size: 2rem;
+}
+
+.NPtasks-container>.tasks-infos-container>.main-task-infos:hover {
+    margin: 1rem 3rem 1rem;
+    background: rgba(227, 226, 226, 0.889);
+    box-shadow: 3px 3px 5px rgb(163, 163, 163);
+}
+
+.NPtasks-container>.tasks-infos-container>div>.task-infos {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.NPtasks-container>.tasks-infos-container>div>.task-infos>h1 {
+    margin: 0rem 2rem 0rem;
+    /* avoid text flowing out of div: */
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.NPtasks-container>.tasks-infos-container>div>.task-infos>h1>span {
+    margin: 0rem 2rem 0rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.NPtasks-container>.tasks-infos-container>div>.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0rem 2rem 0rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+.NPtasks-container>.tasks-infos-container>div>.button-container>button {
+    margin: 0rem 0rem 1rem;
+}
+
+/* Sub-Tasks.js */
+.NPsubTasks-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.NPsubTasks-container>.tasks {
+    width: 30%;
+}
+
+.NPsubTasks-container>.sub-tasks-form {
+    width: 70%;
+    background-color: rgb(246, 246, 252);
+}
+
+/* Sub-Tasks/section1 */
+.NPsubTasks-container>.tasks>div>button {
+    width: 100%;
+    background-color: whitesmoke;
+    border-bottom: .5px solid rgb(217, 216, 216);
+
+}
+
+.NPsubTasks-container>.tasks>div>button:hover {
+    background-color: rgb(174, 202, 253);
+}
+
+.NPsubTasks-container>.tasks>div>button>h1 {
+    margin: 0rem 2rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+.NPsubTasks-container>.tasks>div>button>h1>span {
+    margin: 0rem 2rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-style: italic;
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+.NPsubTasks-container>.tasks>div>button>.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0rem 1rem .5rem;
+}
+
+/* Sub-Tasks/section2 */
+.NPsubTasks-container>.sub-tasks-form>div>.task-name-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(211, 223, 247);
+    border-radius: 5%;
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>.task-name-container>h1 {
+    font-size: 2rem;
+    font-family: "orgonite", sans-serif;
+
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>form>.project-form>p>label {
+    font-size: 2.5rem;
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>form>.project-form>p>input {
+    font-size: 2.5rem;
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>form>.project-form>p>textarea {
+    font-size: 2.5rem;
+}
+
+/* subTasks list------begin */
+.NPsubTasks-container>.sub-tasks-form>div>.sub-tasks-infos-container>.main-sub-task-infos {
+    margin: 1rem 3rem 1rem;
+    background: rgba(227, 226, 226, 0.889);
+    border-radius: .2rem;
+    font-size: 2rem;
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>.sub-tasks-infos-container>.main-sub-task-infos:hover {
+    margin: 1rem 3rem 1rem;
+    background: rgba(227, 226, 226, 0.889);
+    box-shadow: 3px 3px 5px rgb(163, 163, 163);
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>.sub-tasks-infos-container>.main-sub-task-infos>.task-infos>h1 {
+    margin: 0rem 2rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>.sub-tasks-infos-container>.main-sub-task-infos>.task-infos>h1>span {
+    margin: 0rem 2rem 0rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-style: italic;
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>.sub-tasks-infos-container>.main-sub-task-infos>.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>.sub-tasks-infos-container>.main-sub-task-infos>.button-container>button {
+    margin: 0 1rem 1rem;
+}
+
+/* subTasks list------end*/
+
+/* add-sub-tasks-button-----begin */
+.NPsubTasks-container>.sub-tasks-form>div>.add-sub-tasks-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.NPsubTasks-container>.sub-tasks-form>div>.add-sub-tasks-container>button {
+    margin: 0rem 1rem 1rem;
+    font-size: 3rem;
+}
+
+/* add-sub-tasks-button-----end */
+
+/* submission-msg-container-----begin */
+/* add new project-msg-container-----begin */
+.submission-msg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0rem 0rem;
+}
+
+/* submission-msg-container-----end */
+
+
+/* ------------NP---------------------end */
+
+
+
+/* ------------Projects---------------------begin */
+/* add new project msg: */
+.app>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 2rem 0rem;
+    text-decoration: none;
+    font-size: 4rem;
+    font-weight: 700;
+    border: #333 solid;
+    border-radius: 1rem;
+    background-color: rgb(250, 248, 248);
+}
+
+.app>a:hover {
+    box-shadow: 2px 3px 5px rgb(193, 193, 193);
+}
+
+/* ProjectOutput.js */
+.projects-output-container {
+    background-color: rgb(239, 237, 237);
+    border-radius: .5rem;
+    margin: 1rem;
+}
+
+.projects-output-container>div {
+    background-color: whitesmoke;
+    border-radius: .5rem;
+    margin: .5rem;
+}
+
+.projects-output-container>div:hover {
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 5px rgb(163, 163, 163);
+}
+
+.projects-output-container>div>tr {
+    display: flex;
+
+}
+
+.projects-output-container>div>tr>a {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+
+.projects-output-container>div>tr>a>td {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: quicksand;
+}
+
+.projects-output-container>div>tr>a>td:nth-child(2) {
+    font-size: 3rem;
+    font-family: orgonite sans-serif;
+    font-style: italic;
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+/* ProjectDetails.js */
+div>div>.basic-project-infos {
+    margin: 2rem;
+    background-color: whitesmoke;
+}
+
+div>div>.basic-project-infos>.project-title {
+    margin: 0rem 2rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+div>div>.basic-project-infos>.project-title>h1 {
+    font-size: 2.5rem;
+}
+
+div>div>.basic-project-infos>p {
+    margin: 0rem 2rem 0rem;
+    font-size: 2.5rem;
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+div>div>.tasks-infos>ul {
+    margin: 0rem 2rem 2rem;
+    background-color: whitesmoke;
+    list-style-type: none;
+}
+
+div>div>.tasks-infos>ul>.task-title {
+    display: flex;
+}
+
+div>div>.tasks-infos>ul>.task-title>li {
+    margin-right: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: quicksand;
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+div>div>.tasks-infos>ul>li {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: orgonite sans-serif;
+    font-style: italic;
+    /* word-break: break-all; */
+    white-space: pre-wrap;
+}
+
+div>div>.tasks-infos>ul>.subTasks-container {
+    margin: 0rem 2rem 2rem;
+    border-radius: .5rem;
+    background-color: rgb(234, 232, 232);
+}
+
+div>div>.tasks-infos>ul>.subTasks-container>div>button {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    width: 100%;
+    background-color: rgba(223, 220, 220, 0.681);
+    border-radius: 1rem;
+}
+
+div>div>.tasks-infos>ul>.subTasks-container>div>button>span {
+    color: white;
+    margin: 0rem 1rem 0rem;
+}
+
+div>div>.tasks-infos>ul>.subTasks-container>div>div>ul {
+    background-color: whitesmoke;
+    border: 2px solid rgb(162, 162, 162);
+    border-radius: .3rem;
+    margin: 2rem;
+}
+
+div>div>.tasks-infos>ul>.subTasks-container>div>div>ul>.subTask-title {
+    display: flex;
+    list-style-type: none;
+}
+
+div>div>.tasks-infos>ul>.subTasks-container>div>div>ul>.subTask-title>li {
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+div>div>.tasks-infos>ul>.subTasks-container>div>div>ul>li {
+    font-size: 3rem;
+    list-style-type: none;
+}
+
+/* ------------Projects---------------------end */
