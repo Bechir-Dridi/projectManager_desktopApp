@@ -47,22 +47,25 @@ export default function NP() {
 
         const newTasks = [...tasks, task]
         setTasks(newTasks)
+        setTaskId(taskId += 1)
         setTaskName(""); setTaskDescription("");
     }
 
     //delete a task:
-    const handleDeleteTask = (i) => {
+    const handleDeleteTask = (k) => {
         //delete the task:
         const newTasks = [...tasks];
-        newTasks.splice(i, 1);
+        //newTasks.splice(i, 1);
+        setTasks(newTasks.filter((element, i) => i !== k))
 
         //reset the task Id:
-        // newTasks[i].taskId = i
-        // setTaskId(taskId -= 1)
+        setTaskId(newTasks.length - 1)
+        for (let m = k + 1; m <= newTasks.length; m++) {
+            newTasks[m].taskId -= 1
+        }
 
         setTasks(newTasks);
     }
-
 
     //NPsubTasks.js 
     const [subTaskName, setSubTaskName] = useState("")

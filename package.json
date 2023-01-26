@@ -1,13 +1,17 @@
 {
-  "name": "react_template",
+  "name": "project_manager",
   "version": "0.1.0",
   "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "cross-env": "^7.0.3",
     "dexie": "^3.2.2",
     "dexie-react-hooks": "^1.1.1",
+    "electron-is-dev": "^2.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.7.1",
@@ -16,10 +20,35 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "build": "npm run react-build && npm run electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "build": {
+    "appId": "com.my-website.my-app",
+    "productName": "Project Manager",
+    "copyright": "Copyright © 2023 ${author}",
+    "mac": {
+      "icon": "./public/icon.png",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "icon": "./public/icon.png"
+    },
+    "files": [
+      "./build/**/*",
+      "./dist/**/*",
+      "./node_modules/**/*",
+      "./public/**/*",
+      "*.js"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -39,8 +68,13 @@
       "last 1 safari version"
     ]
   },
-  "main": "index.js",
-  "author": "",
+  "author": "Bechir Dridi",
   "license": "ISC",
-  "description": ""
+  "description": "react desktop app developed for WERBOS company",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "wait-on": "^7.0.1",
+    "electron": "^22.0.3",
+    "electron-builder": "^23.6.0"
+  }
 }

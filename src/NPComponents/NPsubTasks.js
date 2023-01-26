@@ -28,8 +28,8 @@ export default function NPsubTasks({ subTaskName, setSubTaskName, subTaskDescrip
       </div>
 
       <div className='sub-tasks-form'>
-        {filtered.map((element, taskId) => (
-          <div key={taskId} >
+        {filtered.map((element, h) => (
+          <div key={h} >
             <div className='task-name-container'>
               <h1>task {element.taskName}</h1>
             </div>
@@ -79,7 +79,7 @@ export default function NPsubTasks({ subTaskName, setSubTaskName, subTaskDescrip
               )}
             </div>
             <div className='add-sub-tasks-container'>
-              <button onClick={() => handleAddSubTasks(taskId)}>add sub-tasks</button>
+              <button onClick={() => handleAddSubTasks(element.taskId)}>add sub-tasks</button>
             </div>
           </div>
         ))
